@@ -1,0 +1,13 @@
+<apex:page controller="wrpdelcntrl">
+<apex:form >
+<apex:pageBlock >
+<apex:commandButton value="delete" action="{!wrpdelrec}"/>
+<apex:pageBlockTable value="{!lstwrp}" var="a">
+<apex:column headerValue="Action">
+<apex:inputCheckbox value="{!a.check}"/>
+</apex:column>
+<apex:column value="{!a.ac.name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+  </apex:page>

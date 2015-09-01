@@ -1,0 +1,9 @@
+<apex:page standardController="account" recordSetVar="lst" >
+<apex:form >
+<apex:pageBlock >
+<apex:dataList value="{!lst}" var="a">
+Account name:{!a.name}
+</apex:dataList>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

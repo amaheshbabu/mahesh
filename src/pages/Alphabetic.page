@@ -1,0 +1,20 @@
+<apex:page controller="search">
+<apex:form >
+<apex:pageBlock >
+<apex:outputLabel >search Name
+<apex:inputtext value="{!search}"/>
+</apex:outputLabel>
+<div align='right'>
+<apex:repeat value="{!lstsearch}" var="b">
+<apex:commandLink value="{!b}" action="{!searchrec}">
+<apex:param value="{!b}" name="searchname" assignTo="{!lst}"/>
+</apex:commandLink>
+</apex:repeat>
+</div>
+<apex:commandButton value="new" Action="{!newrec}"/>
+<apex:pageBlockTable value="{!sub}" var="c">
+<apex:column value="{!c.name}" />
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page standardController="case" recordSetVar="reec" >
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!reec}" var="d">
+<apex:column value="{!d.CaseNumber}"/>
+<apex:column value="{!d.Type}"/>
+
+<apex:column value="{!d.Status}"/>
+<apex:column value="{!d.ClosedDate}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>  
+</apex:page>

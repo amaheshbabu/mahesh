@@ -1,0 +1,16 @@
+<apex:page controller="ctrwrappercontroller" >
+
+<apex:form >
+<apex:pageBlock >
+<apex:commandButton value="delete" action="{!deleterec}"/>
+<apex:pageBlockTable value="{!lstwrap}" var="w">
+<apex:column headerValue="action">
+<apex:inputCheckbox value="{!w.check}"/>
+</apex:column>
+<apex:column value="{!w.acc.name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+ 
+</apex:page>

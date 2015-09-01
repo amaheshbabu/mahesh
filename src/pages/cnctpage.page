@@ -1,0 +1,31 @@
+<apex:page standardController="Contact" extensions="contactlist11" >
+<apex:form >
+  
+    <apex:pageBlock title="Contacts">
+    Account <apex:inputField value="{!Contact.AccountId}"/><br/><br/>
+    <apex:outputLabel >firstname</apex:outputLabel>
+    <apex:inputText value="{!firstname1}"/><br/><br/>
+    <apex:outputLabel >lastname</apex:outputLabel>
+    <apex:inputText value="{!lastname1}"/><br/><br/>    
+    <apex:outputLabel >email</apex:outputLabel>
+    <apex:inputText value="{!Email1}"/><br/><br/>
+    <apex:outputLabel >phone</apex:outputLabel>
+    <apex:inputText value="{!phone1}"/>    <br/><br/>
+      
+                    <apex:outputText value="selecct state"/>
+                    <apex:selectList value="{!states}" size="1">
+                    <apex:selectOptions value="{!states1}"/>
+                    <apex:actionSupport event="onchange" reRender="s"/>
+                
+                    </apex:selectList><br/>
+                    <apex:outputText value="select cities"/>
+                    
+                    <apex:selectList value="{!cities}" id="s" size="1">
+                    <apex:selectOptions value="{!cities1}" />
+                    </apex:selectList><br/>
+
+                    <apex:commandButton value="save" action="{!save}"/>
+    
+   </apex:pageBlock>  
+</apex:form>  
+</apex:page>

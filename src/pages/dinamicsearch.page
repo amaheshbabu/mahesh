@@ -1,0 +1,13 @@
+<apex:page controller="search1">
+<apex:form >
+<apex:outputLabel > Search name
+<apex:inputText value="{!searchname}"/>
+</apex:outputLabel>
+<apex:commandButton value="Search" action="{!searchrec}"/>
+<apex:pageBlock >
+<apex:pageBlockTable value="{!lst}" var="a">
+<apex:column value="{!a.name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

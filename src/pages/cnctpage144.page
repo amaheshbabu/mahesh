@@ -1,0 +1,7 @@
+<apex:page standardController="contact" extensions="cntctcontroller">
+<apex:form >
+Name:<apex:inputtext value="{!contact.Name}"/>
+<apex:commandButton value="login" action="{!login}"/>
+</apex:form>
+
+</apex:page>

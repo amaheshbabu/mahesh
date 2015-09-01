@@ -1,0 +1,9 @@
+<apex:page standardController="account" recordSetVar="accdata">
+  <apex:form >
+  <apex:pageBlock >
+<apex:dataTable value="{!accdata}" var="a">
+<apex:column value="{!a.name}"/>
+</apex:dataTable>
+  </apex:pageBlock>
+  </apeX:form>
+</apex:page>

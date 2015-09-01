@@ -1,0 +1,16 @@
+<apex:page standardController="Account" recordSetVar="lst" extensions="listcontrolle">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockTable value="{!lst}" var="a">
+
+  <apex:column headerValue="Account Name" value="{!a.name}"/>
+  </apex:pageBlockTable>
+
+  <apex:commandButton value="Next" action="{!Next}"/>
+  <apex:commandButton value="Previous" action="{!Previous}"/>
+  <apex:commandButton value="last" action="{!last}" />
+  <apex:commandButton value="First" action="{!first}"/>
+  
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

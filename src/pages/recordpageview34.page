@@ -1,0 +1,19 @@
+<apex:page controller="listcontroller1234">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockTable value="{!lst}" var="a">
+<apex:column headerValue="action">
+<apex:commandButton value="view" action="/{!a.id}"/>
+<apex:commandButton value="Edit" action="/{!a.id}/e"/>
+<apex:commandLink value="del" action="{!dlerec}">
+<apex:param value="{!a.id}" name="parmvalue" assignTo="{!recid}"/>
+</apex:commandLink>
+</apex:column>
+
+
+<apex:column value="{!a.name}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apeX:form>
+ 
+</apex:page>

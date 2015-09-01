@@ -1,0 +1,13 @@
+<apex:page controller="Dynamicapexcls">
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageBlockTable value="{!lst}" var="d">
+  <apex:column value="{!d.objname}"/>
+ <apex:column value="{!d.objtype}"/>
+
+ <!--<apex:column value="{!d}"/>-->
+ </apex:pageBlockTable>
+ 
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page standardController="Opportunity" recordSetVar="rec1">
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageBlockTable value="{!rec1}" var="c">
+ <apex:column value="{!c.Name}"/>
+ <apex:column value="{!c.StageName}"/>
+ <apex:column value="{!c.CloseDate}"/>
+ <apex:column value="{!c.Amount}"/>
+ </apex:pageBlockTable>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

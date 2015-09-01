@@ -1,0 +1,10 @@
+<apex:page controller="Accountcls">
+<apex:form >
+<apex:pageBlock >
+<apex:outputLabel >Account name
+<apex:inputText value="{!Accountname}"/>
+</apex:outputLabel>
+<apex:commandButton value="save" action="{!recsave}"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="listcontroller" tabStyle="account" extensions="conlist,opplist,conlist,caselsit" >
+<apex:form >
+<apex:pageBlock >
+<apex:dataTable value="{!lst}" var="a">
+<apex:column value="{!a.name}"/>
+</apex:dataTable>
+</apex:pageBlock>
+<apex:pageBlock >
+<apex:pageBlockTable value="{!lstcon}" var="c">
+<apex:column value="{!c.lastname}"/>
+
+</apex:pageblockTable>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

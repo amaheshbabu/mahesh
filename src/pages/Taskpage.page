@@ -1,0 +1,24 @@
+<apex:page standardController="Account" extensions="viewcontroller" >
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:commandButton value="newAccount" action="{!newAccount}"/>
+            <apex:pageBlockTable value="{!Acc}" var="a">
+            <apex:column headerValue="Account name">
+            <apex:commandButton value="{!a.name}" action="/{!a.id}"/>
+            </apex:column>
+             <apex:repeat value="{!a.Contacts}" var="c" rendered="{!cntshw}">
+                <apex:column value="{!c.lastname}"/>
+            </apex:repeat>
+            </apex:pageblockTable>
+            </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!actshw}">
+        <apex:inputField value="{!account.name}"/>
+        <apex:inputField value="{!account.phone}"/>
+        <apex:commandButton value="save" action="{!recsave}"/>
+        
+        </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+     </apex:form>
+</apex:page>
